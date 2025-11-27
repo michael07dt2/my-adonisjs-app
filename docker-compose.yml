@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: local-new-postgres
+    image: postgres:17.4
+    env_file:
+      - .env
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    volumes:
+      - ./postgres/dbroot:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:5432"

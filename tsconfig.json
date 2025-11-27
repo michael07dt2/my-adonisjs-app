@@ -1,0 +1,46 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./build",
+    "paths": {
+      "#routes/*": [
+        "./routes/*"
+      ],
+      "#controllers/*": [
+        "./app/controllers/*"
+      ],
+      "#models/*": [
+        "./app/models/*"
+      ],
+      "#mails/*": [
+        "./app/mails/*"
+      ],
+      "#exceptions/*": [
+        "./app/exceptions/*"
+      ],
+      "#middleware/*": [
+        "./app/middleware/*"
+      ],
+      "#listeners/*": [
+        "./app/listeners/*"
+      ],
+      "#events/*": [
+        "./app/events/*"
+      ],
+      "#stubs/*": [
+        "./stubs/*"
+      ],
+      "#validators/*": [
+        "./app/validators/*"
+      ],
+      "#services/*": [
+        "./app/services/*"
+      ],
+      "#start/*": [
+        "./start/*"
+      ],
+    }
+  },
+  "exclude": ["./inertia/**/*", "node_modules", "build"]
+}
