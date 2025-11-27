@@ -8,7 +8,7 @@
 */
 
 import router from '@adonisjs/core/services/router'
-import { PostRoutes } from '#routes/post.js'
+import { PostRoutes } from '#routes/post'
 
 router.on('/').renderInertia('home')
 

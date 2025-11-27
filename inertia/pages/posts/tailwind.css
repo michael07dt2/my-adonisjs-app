@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@import './post-detail.css';
+
+/* 
+
+플로팅 버튼
+
+*/
+.floating-action-button {
+  @apply fixed bottom-6 right-6 w-14 h-14 rounded-full bg-blue-600 text-white text-3xl shadow-lg focus:outline-none transition duration-150 ease-in-out z-50;
+}
+
+/* 호버 상태 스타일 */
+.floating-action-button:hover {
+  @apply bg-blue-700;
+}
+
+/* 1. Modal Backdrop (오버레이) */
+.modal-backdrop {
+  @apply fixed inset-0 z-[9999] flex items-center justify-center;
+}
+
+/* 2. Modal Overlay (클릭 시 닫는 반투명 검은색 레이어) */
+.modal-overlay {
+  @apply absolute inset-0 bg-gray-900 opacity-50;
+}
+
+/* 3. Modal Content/Form Box (실제 모달 창) */
+.modal-form-box {
+  @apply bg-white rounded-lg shadow-xl p-6 w-11/12 md:w-1/3 max-w-lg relative z-10 transform transition-all duration-300;
+
+  @apply text-gray-900;
+}
+
+/* 4. 공통 입력 필드 스타일 */
+.input-text-field {
+  @apply mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+}
+
+/*
+
+  게시판 
+
+  */
+.board-container {
+  @apply left-0 w-full pt-8 px-6 pb-12;
+  @apply min-h-screen;
+}
+
+.board-header {
+  @apply text-4xl font-extrabold mb-8 text-gray-900;
+}
+
+/* 게시판 버튼 */
+.view-toggle-area {
+  @apply w-full flex justify-end items-center mb-4 space-x-3;
+}
+
+.toggle-button-group {
+  @apply inline-flex rounded-md shadow-sm;
+}
+
+.toggle-button {
+  @apply py-2 px-4 text-sm font-medium border border-gray-200;
+}
+
+.per-page-select {
+  @apply py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm;
+}
+
+/* 카드형 스타일 목록 */
+.card-list-wrapper {
+  @apply space-y-4 pr-2 border-t pt-4;
+}
+
+.post-card {
+  @apply p-5 bg-white border border-gray-100 rounded-xl shadow-lg transition transform duration-300 ease-in-out cursor-pointer;
+}
+
+.post-card:hover {
+  @apply shadow-2xl -translate-y-1;
+}
+
+.post-card-header {
+  @apply flex items-center justify-between;
+}
+
+.post-card-title {
+  @apply text-xl font-semibold text-gray-800 truncate pr-4;
+}
+
+.post-card-author {
+  @apply text-sm font-medium text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full flex-shrink-0;
+}
+
+.post-card-content {
+  @apply text-gray-500 text-base mt-2 truncate;
+}
+
+.post-card-date {
+  @apply text-gray-400 text-sm mt-2 truncate;
+}
+
+/* 목록형 스타일 목록 */
+.list-table-wrapper {
+  @apply border-t pt-4;
+}
+
+.board-table {
+  @apply w-full divide-y divide-gray-200 table table-fixed;
+}
+
+.table-header-row {
+  @apply bg-gray-50;
+}
+
+.table-head-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.table-body-row {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table-header-th,
+.table-data-cell {
+  @apply px-6 py-4 text-sm font-medium text-center text-gray-500 uppercase tracking-wider;
+}
+
+/*
+  
+  페이징 버튼
+  
+  */
+/* 1. 페이징 버튼 고정 컨테이너 */
+.pagination-fixed-wrapper {
+  @apply fixed bottom-10 left-0 right-0 flex justify-center z-40;
+}
+
+/* 2. 버튼 그룹 스타일 */
+.pagination-button-group {
+  @apply flex space-x-2 items-center;
+}
+
+/* 3. 이전/다음 버튼 스타일 */
+.pagination-nav-button {
+  @apply px-3 py-2 font-medium text-sm rounded-lg transition;
+}
+
+/* 4. 현재 페이지 표시 스타일 */
+.pagination-status-box {
+  @apply flex items-center space-x-1 px-4 py-2 text-sm border rounded-lg bg-gray-100;
+}
+.pagination-page-input {
+  @apply w-12 text-center border-none focus:ring-0 bg-transparent text-gray-700 font-semibold;
+}

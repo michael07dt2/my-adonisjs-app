@@ -5,7 +5,7 @@
     "outDir": "./build",
     "paths": {
       "#routes/*": [
-        "./routes/*"
+        "./start/routes/*"
       ],
       "#controllers/*": [
         "./app/controllers/*"
